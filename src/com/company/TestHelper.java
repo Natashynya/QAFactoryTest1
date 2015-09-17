@@ -12,7 +12,7 @@ public class TestHelper {
 
     public static void setup ()
     {
-        System.setProperty("webdriver.chrome.driver", "D:\\Chrome\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver");
         drv = new ChromeDriver();
     }
 
