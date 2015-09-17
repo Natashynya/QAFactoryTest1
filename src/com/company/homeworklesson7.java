@@ -11,23 +11,23 @@ import java.util.List;
  */
 public class homeworklesson7 {
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "D:\\Chrome\\chromedriver.exe"); //ключ
+        System.setProperty("webdriver.chrome.driver", "D:\\Chrome\\chromedriver.exe"); //РєР»СЋС‡
         ChromeDriver driver1 = new ChromeDriver();
         driver1.get("https://stage.tether.to");
         System.out.println(driver1.getTitle());//title
-        //3.Нажать на ссьілку Request access.
+        //3.РќР°Р¶Р°С‚СЊ РЅР° СЃСЃСЊС–Р»РєСѓ Request access.
         WebElement j = driver1.findElementByXPath("//a[text()='Request access']");
         j.sendKeys(Keys.ENTER);
         slp(1);
-        //4.Напечатать в консоль заголовок единственного поля для ввода на открьівшейся странице.
+        //4.РќР°РїРµС‡Р°С‚Р°С‚СЊ РІ РєРѕРЅСЃРѕР»СЊ Р·Р°РіРѕР»РѕРІРѕРє РµРґРёРЅСЃС‚РІРµРЅРЅРѕРіРѕ РїРѕР»СЏ РґР»СЏ РІРІРѕРґР° РЅР° РѕС‚РєСЂСЊС–РІС€РµР№СЃСЏ СЃС‚СЂР°РЅРёС†Рµ.
         WebElement x=driver1.findElementByXPath("//label[text()='Email address']");
         System.out.println(x.getText());
        // slp(1);
-        //5.Нажать на ссьілку Already have an invite code?
+        //5.РќР°Р¶Р°С‚СЊ РЅР° СЃСЃСЊС–Р»РєСѓ Already have an invite code?
         WebElement y=driver1.findElementByXPath("//a[text()='Already have an invite code?']");
         y.sendKeys(Keys.ENTER);
         slp(1);
-       //6. Напечатать в консоль заголовки всех полей кроме вьібора страньі.
+       //6. РќР°РїРµС‡Р°С‚Р°С‚СЊ РІ РєРѕРЅСЃРѕР»СЊ Р·Р°РіРѕР»РѕРІРєРё РІСЃРµС… РїРѕР»РµР№ РєСЂРѕРјРµ РІСЊС–Р±РѕСЂР° СЃС‚СЂР°РЅСЊС–.
 
         WebElement z1=driver1.findElementByXPath("//label[text()='Invite Code']");
         System.out.println(z1.getText());
@@ -53,8 +53,8 @@ public class homeworklesson7 {
         System.out.println("***");
 
         //slp(1);
-        //List<WebElement> d=driver1.findElementsByXPath("//md-input-container/label"); -получить все заголовки
-      //7. Заполнить первьіе 3 поля.
+        //List<WebElement> d=driver1.findElementsByXPath("//md-input-container/label"); -РїРѕР»СѓС‡РёС‚СЊ РІСЃРµ Р·Р°РіРѕР»РѕРІРєРё
+      //7. Р—Р°РїРѕР»РЅРёС‚СЊ РїРµСЂРІСЊС–Рµ 3 РїРѕР»СЏ.
         WebElement z11=driver1.findElementByXPath("//input[@name='inviteCode']");
         z11.sendKeys("123");
         WebElement z22=driver1.findElementByXPath("//input[@name='firstname']");
@@ -63,7 +63,7 @@ public class homeworklesson7 {
         z33.sendKeys("Litvinenko");
 
         slp(5);
-        //8. Напечатать в консоль ошибку которая появилась возле первого поля.
+        //8. РќР°РїРµС‡Р°С‚Р°С‚СЊ РІ РєРѕРЅСЃРѕР»СЊ РѕС€РёР±РєСѓ РєРѕС‚РѕСЂР°СЏ РїРѕСЏРІРёР»Р°СЃСЊ РІРѕР·Р»Рµ РїРµСЂРІРѕРіРѕ РїРѕР»СЏ.
         WebElement err=driver1.findElementByXPath("//md-input-container[1]//*[@class='ng-scope']");
         System.out.println(err.getText());
         // slp(1);
