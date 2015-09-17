@@ -12,7 +12,7 @@ import java.security.Key;
 public class driverxpath {
 
     public static void main(String[] args) throws InterruptedException {
-        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver"); //ключ
+        System.setProperty("webdriver.chrome.driver", "/usr/local/bin/chromedriver"); //ключ D:\Chrome\chromedriver.exe
         ChromeDriver driver1 = new ChromeDriver();
         driver1.get("http://angel.net/~nic/passwd.current.html");
         System.out.println(driver1.getTitle());//title
