@@ -51,7 +51,7 @@ public class AngelPage {
 
     public static boolean getGeneratePassword ()
     {
-        return TestHelper.drv.findElement(By.xpath("//input[@type='password']]")).isEnabled();
+        return TestHelper.drv.findElement(By.xpath("//input[@type='password']")).isEnabled();
     }
 
     public static String getPasswordFildName()
